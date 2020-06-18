@@ -261,16 +261,43 @@ public class UserControllerTest {
 	}
 
 	@Test
-	public void deleteUserById() {
-		String apiUrl = "/users/user/"
+	public void deleteUserById() throws Exception {
+		String apiUrl = "/users/user/{userid}";
+		RequestBuilder rb = MockMvcRequestBuilders
+			.delete(apiUrl, "300")
+			.contentType(MediaType.APPLICATION_JSON)
+			.accept(MediaType.APPLICATION_JSON);
+
+		mockMvc.perform(rb).andExpect((status().isOk())).andDo(MockMvcResultHandlers.print());
 	}
 
 	@Test
-	public void getNumUserEmails() {
+	public void getNumUserEmails() throws Exception {
+		// String apiUrl = "/user/email/count";
+		// System.out.println(userService.getCountUserEmails());
+		// Mockito.when(userService.getCountUserEmails().size()).thenReturn(userList.());
+		// RequestBuilder rb = MockMvcRequestBuilders.get(apiUrl).accept(MediaType.APPLICATION_JSON);
+		//
+		// MvcResult r = mockMvc.perform(rb).andReturn();
+		// String tr = r.getResponse().getContentAsString();
+		//
+		// ObjectMapper mapper = new ObjectMapper();
+		// String er = mapper.writeValueAsString(userList.size());
+		//
+		// System.out.println("Expect - " + er);
+		// System.out.println("Actual - " + tr);
+		// assertEquals("Rest API Returns List", er, tr);
 	}
 
 	@Test
-	public void deleteUserRoleByIds() {
+	public void deleteUserRoleByIds() throws Exception {
+		String apiUrl = "/user/{userid}/role/{roleid}";
+		RequestBuilder rb = MockMvcRequestBuilders
+			.delete(apiUrl, 200, 2)
+			.contentType(MediaType.APPLICATION_JSON)
+			.accept(MediaType.APPLICATION_JSON);
+
+		mockMvc.perform(rb).andExpect((status().isOk())).andDo(MockMvcResultHandlers.print());
 	}
 
 	@Test
