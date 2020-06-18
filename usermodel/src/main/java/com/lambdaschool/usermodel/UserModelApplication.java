@@ -9,17 +9,15 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
  */
 @EnableJpaAuditing
 @SpringBootApplication
-public class UserModelApplication
-{
+public class UserModelApplication {
 
-    /**
-     * Main method to start the application.
-     *
-     * @param args Not used in this application.
-     */
-    public static void main(String[] args)
-    {
-        SpringApplication.run(UserModelApplication.class,
-            args);
-    }
+	/**
+	 * Main method to start the application.
+	 *
+	 * @param args Not used in this application.
+	 */
+	public static void main(String[] args) {
+		SpringApplication.run(UserModelApplication.class,
+			args);
+	}
 }

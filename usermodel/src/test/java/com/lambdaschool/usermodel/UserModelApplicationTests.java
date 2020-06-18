@@ -10,12 +10,10 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserModelApplicationTests
-{
+public class UserModelApplicationTests {
 
-    @Test
-    public void contextLoads()
-    {
-    }
+	@Test
+	public void contextLoads() {
+	}
 
 }
