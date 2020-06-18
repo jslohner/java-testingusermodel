@@ -6,6 +6,7 @@ import com.lambdaschool.usermodel.models.User;
 import com.lambdaschool.usermodel.models.UserRoles;
 import com.lambdaschool.usermodel.models.Useremail;
 import com.lambdaschool.usermodel.services.UserService;
+import com.lambdaschool.usermodel.views.UserNameCountEmails;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -270,12 +271,34 @@ public class UserControllerTest {
 
 		mockMvc.perform(rb).andExpect((status().isOk())).andDo(MockMvcResultHandlers.print());
 	}
+	//
+	// String getUsernamerpt();
+	//
+	// /**
+	//  * The count of the emails. Must be called countemails
+	//  *
+	//  * @return the count (int) of the mails
+	//  */
+	// int getCountemails();
 
 	@Test
 	public void getNumUserEmails() throws Exception {
-		// String apiUrl = "/user/email/count";
-		// System.out.println(userService.getCountUserEmails());
-		// Mockito.when(userService.getCountUserEmails().size()).thenReturn(userList.());
+		// String apiUrl = "/users/user/email/count";
+		// List<UserNameCountEmails> userListCountEmails = new ArrayList<>();
+		// for (User u : userList) {
+		// 	userListCountEmails.add(new UserNameCountEmails() {
+		// 		@Override
+		// 		public String getUsernamerpt() {
+		// 			return u.getUsername();
+		// 		}
+		//
+		// 		@Override
+		// 		public int getCountemails() {
+		// 			return u.getUseremails().size();
+		// 		}
+		// 	});
+		// }
+		// Mockito.when(userService.getCountUserEmails()).thenReturn((UserNameCountEmails)userListCountEmails);
 		// RequestBuilder rb = MockMvcRequestBuilders.get(apiUrl).accept(MediaType.APPLICATION_JSON);
 		//
 		// MvcResult r = mockMvc.perform(rb).andReturn();
@@ -291,9 +314,9 @@ public class UserControllerTest {
 
 	@Test
 	public void deleteUserRoleByIds() throws Exception {
-		String apiUrl = "/user/{userid}/role/{roleid}";
+		String apiUrl = "/users/user/{userid}/role/{roleid}";
 		RequestBuilder rb = MockMvcRequestBuilders
-			.delete(apiUrl, 200, 2)
+			.delete(apiUrl, 300, 1)
 			.contentType(MediaType.APPLICATION_JSON)
 			.accept(MediaType.APPLICATION_JSON);
 
