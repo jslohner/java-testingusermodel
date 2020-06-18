@@ -1,7 +1,6 @@
 package com.lambdaschool.usermodel.services;
 
 import com.lambdaschool.usermodel.UserModelApplication;
-import com.lambdaschool.usermodel.UserModelApplicationTests;
 import com.lambdaschool.usermodel.models.User;
 import com.lambdaschool.usermodel.models.UserRoles;
 import com.lambdaschool.usermodel.models.Useremail;
