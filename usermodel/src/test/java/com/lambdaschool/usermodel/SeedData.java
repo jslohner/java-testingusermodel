@@ -66,7 +66,7 @@ public class SeedData implements CommandLineRunner {
 			r2));
 		admins.add(new UserRoles(new User(),
 			r3));
-		User u1 = new User("admin",
+		User u1 = new User("test admin",
 			"password",
 			"admin@lambdaschool.local",
 			admins);
@@ -85,7 +85,7 @@ public class SeedData implements CommandLineRunner {
 			r3));
 		datas.add(new UserRoles(new User(),
 			r2));
-		User u2 = new User("cinnamon",
+		User u2 = new User("test cinnamon",
 			"1234567",
 			"cinnamon@lambdaschool.local",
 			datas);
@@ -104,7 +104,7 @@ public class SeedData implements CommandLineRunner {
 		ArrayList<UserRoles> users = new ArrayList<>();
 		users.add(new UserRoles(new User(),
 			r2));
-		User u3 = new User("barnbarn",
+		User u3 = new User("test barnbarn",
 			"ILuvM4th!",
 			"barnbarn@lambdaschool.local",
 			users);
@@ -116,7 +116,7 @@ public class SeedData implements CommandLineRunner {
 		users = new ArrayList<>();
 		users.add(new UserRoles(new User(),
 			r2));
-		User u4 = new User("puttat",
+		User u4 = new User("test puttat",
 			"password",
 			"puttat@school.lambda",
 			users);
@@ -125,7 +125,7 @@ public class SeedData implements CommandLineRunner {
 		users = new ArrayList<>();
 		users.add(new UserRoles(new User(),
 			r2));
-		User u5 = new User("misskitty",
+		User u5 = new User("test misskitty",
 			"password",
 			"misskitty@school.lambda",
 			users);
